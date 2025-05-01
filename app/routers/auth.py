@@ -5,7 +5,10 @@ from app.database import SessionLocal
 from app.crud import user as crud_user
 from app.services import auth_service
 
-router = APIRouter(prefix="/auth", tags=["Authentication"])
+router = APIRouter(
+    prefix="/auth",
+    tags=["Authentication"]
+)
 
 def get_db():
     db = SessionLocal()

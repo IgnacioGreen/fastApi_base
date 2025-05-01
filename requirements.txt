@@ -7,3 +7,5 @@ passlib[bcrypt]
 python-multipart
 alembic
 python-dotenv
+pydantic_settings
+python-jose[cryptography]
