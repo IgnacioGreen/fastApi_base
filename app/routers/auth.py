@@ -32,3 +32,4 @@ def login(user: UserLogin, db: Session = Depends(get_db)):
         raise HTTPException(status_code=400, detail="Incorrect email or password")
     token = auth_service.login_user(db_user)
     return {"access_token": token, "token_type": "bearer"}
+

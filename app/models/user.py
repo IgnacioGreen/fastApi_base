@@ -1,6 +1,5 @@
 from sqlalchemy import Column, Integer, String, Boolean
-from sqlalchemy.orm import relationship
-from app.database import Base, BaseModel
+from app.database import Base
 
 class User(Base):
     __tablename__ = "user"
@@ -10,9 +9,3 @@ class User(Base):
     hashed_password = Column(String, nullable=False)
     is_active = Column(Boolean, default=True)
     is_superuser = Column(Boolean, default=False)
-    
-    # Relaciones
-    orders = relationship("Order", back_populates="user")
-
-class ModelCreate(BaseModel):
-    pass
